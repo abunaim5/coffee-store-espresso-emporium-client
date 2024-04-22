@@ -1,8 +1,9 @@
+import Quality from "../../components/Quality/Quality";
 
 const Home = () => {
     return (
         <div>
-            <h1 className="text-4xl">This is Home</h1>
+            <Quality></Quality>
         </div>
     );
 };
