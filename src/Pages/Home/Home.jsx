@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div>
             <Quality></Quality>
-            <div className="mt-28">
+            <div className="my-28">
                 <FollowOnInstagram></FollowOnInstagram>
             </div>
         </div>
