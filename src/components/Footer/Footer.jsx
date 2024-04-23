@@ -33,11 +33,11 @@ const Footer = () => {
                 <div className=''>
                     <h2 className='font-rancho text-[45px] text-[#331A15] mb-8'>Connect with Us</h2>
                     <form>
-                        <input type="text" name="name" id="" className='px-3 py-4 mb-4 w-full outline-none rounded-md text-[#1B1A1A99]' placeholder='Name' />
+                        <input type="text" name="name" id="" className='px-3 py-4 mb-4 w-full outline-none rounded-md text-[#1B1A1A99] focus:shadow-[#E3B577] focus:shadow-md' placeholder='Name' />
                         <br />
-                        <input type="email" name="email" id="" className='px-3 py-4 w-full outline-none rounded-md text-[#1B1A1A99]' placeholder='Email' />
+                        <input type="email" name="email" id="" className='px-3 py-4 w-full outline-none rounded-md text-[#1B1A1A99] focus:shadow-[#E3B577] focus:shadow-md' placeholder='Email' />
                         <br />
-                        <textarea name="message" id="" className='px-3 py-4 mt-4 w-full outline-none rounded-md text-[#1B1A1A99]' cols="60" rows="4" placeholder='Message'></textarea>
+                        <textarea name="message" id="" className='px-3 py-4 mt-4 w-full outline-none rounded-md text-[#1B1A1A99] focus:shadow-[#E3B577] focus:shadow-md' cols="60" rows="4" placeholder='Message'></textarea>
                         <br />
                         <input type="submit" value="Send Message" className='btn w-auto h-auto min-h-max text-2xl font-rancho text-[#331A15] bg-transparent border-2 border-[#331A15] rounded-full py-2 px-5 mt-6' />
                     </form>

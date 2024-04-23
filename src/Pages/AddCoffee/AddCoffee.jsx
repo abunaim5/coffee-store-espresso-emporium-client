@@ -1,11 +1,12 @@
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import background from '../../../public/images/more/11.png'
 
 const AddCoffee = () => {
     return (
-        <div className="mt-12 mb-28">
+        <div style={{backgroundImage: `url(${background})`}} className="pt-12 pb-28 bg-no-repeat bg-cover">
             <div className="max-w-7xl mx-auto">
-                <Link to='/'><button className="font-rancho text-3xl text-[#374151] flex items-center gap-4 mb-12"><span className="text-2xl"><FaArrowLeft /></span><span>Back to home</span></button></Link>
+                <Link to='/' className=""><button className="font-rancho text-3xl text-[#374151] flex items-center gap-4 mb-12 hover:bg-[#D2B48C] rounded-lg py-4 px-2"><span className="text-2xl"><FaArrowLeft /></span><span>Back to home</span></button></Link>
                 <div className="bg-[#F4F3F0] rounded-md py-16 px-28">
                     <div className="text-center mb-8">
                         <h2 className="text-[45px] font-rancho text-[#374151] mb-4">Add New Coffee</h2>
@@ -51,7 +52,7 @@ const AddCoffee = () => {
                             </div>
                             <div className="">
                                 <div>
-                                    <input className="w-full p-3 outline-none rounded-md btn h-auto min-h-max bg-[#D2B48C] border-2 border-[#331A15] text-2xl font-rancho text-[#331A15]" type="submit" id="" value="Add Coffee" />
+                                    <input className="w-full p-3 outline-none rounded-md btn h-auto min-h-max bg-[#D2B48C] border-2 border-transparent hover:bg-transparent hover:border-[#331A15] text-2xl font-rancho text-[#331A15]" type="submit" id="" value="Add Coffee" />
                                 </div>
                             </div>
                         </form>
