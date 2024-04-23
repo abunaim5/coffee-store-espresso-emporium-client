@@ -7,6 +7,7 @@ import {
 import './index.css'
 import Root from './Layout/Root.jsx';
 import Home from './Pages/Home/Home.jsx';
+import AddCoffee from './Pages/AddCoffee/AddCoffee.jsx';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>
       },
+      {
+        path: '/addcoffee',
+        element: <AddCoffee></AddCoffee>
+      }
     ],
   },
 ]);
