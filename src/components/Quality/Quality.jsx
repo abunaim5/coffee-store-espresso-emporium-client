@@ -1,7 +1,7 @@
-import icon1 from '../../../public/images/icons/1.png'
-import icon2 from '../../../public/images/icons/2.png'
-import icon3 from '../../../public/images/icons/3.png'
-import icon4 from '../../../public/images/icons/4.png'
+import icon1 from '/images/icons/1.png'
+import icon2 from '/images/icons/2.png'
+import icon3 from '/images/icons/3.png'
+import icon4 from '/images/icons/4.png'
 
 const Quality = () => {
     return (

@@ -1,6 +1,6 @@
 import { FaArrowLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import background from '../../../public/images/more/11.png'
+import background from '/images/more/11.png'
 
 const AddCoffee = () => {
     return (

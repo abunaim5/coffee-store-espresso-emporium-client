@@ -1,6 +1,6 @@
-import logo from '../../../public/images/more/logo1.png';
-import background from '../../../public/images/more/13.jpg';
-import copyBackground from '../../../public/images/more/24.jpg';
+import logo from '/images/more/logo1.png';
+import background from '/images/more/13.jpg';
+import copyBackground from '/images/more/24.jpg';
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
@@ -39,7 +39,7 @@ const Footer = () => {
                         <br />
                         <textarea name="message" id="" className='px-3 py-4 mt-4 w-full outline-none rounded-md text-[#1B1A1A99] focus:shadow-[#E3B577] focus:shadow-md' cols="60" rows="4" placeholder='Message'></textarea>
                         <br />
-                        <input type="submit" value="Send Message" className='btn w-auto h-auto min-h-max text-2xl font-rancho text-[#331A15] bg-transparent border-2 border-[#331A15] rounded-full py-2 px-5 mt-6' />
+                        <input type="submit" value="Send Message" className='btn w-auto h-auto min-h-max text-2xl font-rancho text-[#331A15] bg-transparent border-2 hover:border-transparent border-[#331A15] hover:bg-[#E3B577] rounded-full py-2 px-5 mt-6' />
                     </form>
                 </div>
             </div>

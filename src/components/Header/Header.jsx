@@ -1,5 +1,5 @@
-import logo from '../../../public/images/more/logo1.png';
-import background from '../../../public/images/more/15.jpg';
+import logo from '/images/more/logo1.png';
+import background from '/images/more/15.jpg';
 
 const Header = () => {
     return (
