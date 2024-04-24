@@ -9,6 +9,7 @@ import Root from './Layout/Root.jsx';
 import Home from './Pages/Home/Home.jsx';
 import AddCoffee from './Pages/AddCoffee/AddCoffee.jsx';
 import Details from './Pages/Details/Details.jsx';
+import UpdateCoffeeDetails from './Pages/UpdateCoffeeDetails/UpdateCoffeeDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,11 @@ const router = createBrowserRouter([
       {
         path: '/details/:id',
         element: <Details></Details>,
+        loader: ({params}) => fetch(`http://localhost:5000/coffees/${params.id}`)
+      },
+      {
+        path: '/updateCoffee/:id',
+        element: <UpdateCoffeeDetails></UpdateCoffeeDetails>,
         loader: ({params}) => fetch(`http://localhost:5000/coffees/${params.id}`)
       }
     ],

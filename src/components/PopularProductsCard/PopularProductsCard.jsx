@@ -4,7 +4,7 @@ import { IoPencilSharp } from "react-icons/io5";
 import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
 
-const PopularProductsCard = ({ coffee, handleViewDetails, handleDelete }) => {
+const PopularProductsCard = ({ coffee, handleViewDetails, handleDelete, handleUpdateCoffee }) => {
     const { _id, name, chef, price, photo } = coffee;
 
     return (
@@ -19,7 +19,7 @@ const PopularProductsCard = ({ coffee, handleViewDetails, handleDelete }) => {
             </div>
             <div className="flex flex-col gap-4">
                 <Link to={`/details/${_id}`}><button onClick={() => handleViewDetails(_id)} className="btn w-auto max-w-max h-auto min-h-max text-xl text-white p-2 rounded-md bg-[#D2B48C]"><FaEye /></button></Link>
-                <button className="btn w-auto max-w-max h-auto min-h-max text-xl text-white p-2 rounded-md bg-[#3C393B]"><IoPencilSharp /></button>
+                <Link to={`/updateCoffee/${_id}`}><button onClick={() => handleUpdateCoffee(_id)} className="btn w-auto max-w-max h-auto min-h-max text-xl text-white p-2 rounded-md bg-[#3C393B]"><IoPencilSharp /></button></Link>
                 <button onClick={() => handleDelete(_id)} className="btn w-auto max-w-max h-auto min-h-max text-xl text-white p-2 rounded-md bg-[#EA4744]"><MdDelete /></button>
             </div>
         </div>
@@ -29,6 +29,7 @@ const PopularProductsCard = ({ coffee, handleViewDetails, handleDelete }) => {
 PopularProductsCard.propTypes = {
     coffee: PropTypes.object.isRequired,
     handleViewDetails: PropTypes.func.isRequired,
+    handleUpdateCoffee: PropTypes.func.isRequired,
     handleDelete: PropTypes.func.isRequired
 }
 

@@ -17,6 +17,14 @@ const PopularProducts = () => {
             })
     };
 
+    const handleUpdateCoffee = id => {
+        fetch(`http://localhost:5000/coffees/${id}`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+        })
+    }
+
     const handleDelete = id => {
         Swal.fire({
             title: "Are you sure?",
@@ -63,6 +71,7 @@ const PopularProducts = () => {
                             coffee={coffee}
                             handleViewDetails={handleViewDetails}
                             handleDelete={handleDelete}
+                            handleUpdateCoffee={handleUpdateCoffee}
                         ></PopularProductsCard>)
                     }
                 </div>
