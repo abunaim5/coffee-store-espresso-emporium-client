@@ -4,16 +4,8 @@ import { IoPencilSharp } from "react-icons/io5";
 import PropTypes from 'prop-types'
 import { Link } from "react-router-dom";
 
-const PopularProductsCard = ({ coffee }) => {
+const PopularProductsCard = ({ coffee, handleViewDetails, handleDelete }) => {
     const { _id, name, chef, price, photo } = coffee;
-
-    const handleViewDetails = id => {
-        fetch(`http://localhost:5000/coffees/${id}`)
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-            })
-    }
 
     return (
         <div className="flex justify-between items-center bg-[#F5F4F1] glass px-12 py-8 gap-6 rounded-lg">
@@ -28,14 +20,16 @@ const PopularProductsCard = ({ coffee }) => {
             <div className="flex flex-col gap-4">
                 <Link to={`/details/${_id}`}><button onClick={() => handleViewDetails(_id)} className="btn w-auto max-w-max h-auto min-h-max text-xl text-white p-2 rounded-md bg-[#D2B48C]"><FaEye /></button></Link>
                 <button className="btn w-auto max-w-max h-auto min-h-max text-xl text-white p-2 rounded-md bg-[#3C393B]"><IoPencilSharp /></button>
-                <button className="btn w-auto max-w-max h-auto min-h-max text-xl text-white p-2 rounded-md bg-[#EA4744]"><MdDelete /></button>
+                <button onClick={() => handleDelete(_id)} className="btn w-auto max-w-max h-auto min-h-max text-xl text-white p-2 rounded-md bg-[#EA4744]"><MdDelete /></button>
             </div>
         </div>
     );
 };
 
 PopularProductsCard.propTypes = {
-    coffee: PropTypes.object.isRequired
+    coffee: PropTypes.object.isRequired,
+    handleViewDetails: PropTypes.func.isRequired,
+    handleDelete: PropTypes.func.isRequired
 }
 
 export default PopularProductsCard;
