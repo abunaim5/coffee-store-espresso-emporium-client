@@ -5,10 +5,10 @@ import Swal from "sweetalert2";
 
 const UpdateCoffeeDetails = () => {
     const loadedCoffee = useLoaderData();
-    const {_id, name, chef, supplier, taste, category, details, origin, price, photo} = loadedCoffee;
+    const { _id, name, chef, supplier, taste, category, details, origin, price, photo } = loadedCoffee;
     // console.log(loadedCoffee);
 
-    const handleUpdateCoffee = e =>{
+    const handleUpdateCoffee = e => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
@@ -20,7 +20,7 @@ const UpdateCoffeeDetails = () => {
         const origin = form.origin.value;
         const price = form.price.value;
         const photo = form.photo.value;
-        const updatedCoffee = {name, chef, supplier, taste, category, details, origin, price, photo};
+        const updatedCoffee = { name, chef, supplier, taste, category, details, origin, price, photo };
 
         fetch(`http://localhost:5000/coffees/${_id}`, {
             method: 'PUT',
@@ -29,23 +29,25 @@ const UpdateCoffeeDetails = () => {
             },
             body: JSON.stringify(updatedCoffee)
         })
-        .then(res => res.json())
-        .then(data => {
-            if(data.modifiedCount > 0){
-                Swal.fire({
-                    icon: "success",
-                    title: "Sweet",
-                    text: "Coffee successfully updated",
-                  });
-            }
-            console.log(data);
-        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    Swal.fire({
+                        icon: "success",
+                        title: "Sweet",
+                        text: "Coffee successfully updated",
+                    });
+                }
+                console.log(data);
+            })
     }
 
     return (
-        <div style={{backgroundImage: `url(${background})`}} className="pt-12 pb-28 bg-no-repeat bg-cover">
+        <div style={{ backgroundImage: `url(${background})` }} className="pt-12 pb-28 bg-no-repeat bg-cover">
             <div className="max-w-7xl mx-auto">
-                <Link to='/' className=""><button className="font-rancho text-3xl text-[#374151] flex items-center gap-4 mb-12 hover:bg-[#D2B48C] rounded-lg py-4 px-2"><span className="text-2xl"><FaArrowLeft /></span><span>Back to home</span></button></Link>
+                <div className="max-w-max">
+                    <Link to='/' className=""><button className="font-rancho text-3xl text-[#374151] flex items-center gap-4 mb-12 hover:bg-[#D2B48C] rounded-lg py-4 px-2"><span className="text-2xl"><FaArrowLeft /></span><span>Back to home</span></button></Link>
+                </div>
                 <div className="bg-[#F4F3F0] rounded-md py-16 px-28">
                     <div className="text-center mb-8">
                         <h2 className="text-[45px] font-rancho text-[#374151] mb-4">Update Existing Coffee Details</h2>
